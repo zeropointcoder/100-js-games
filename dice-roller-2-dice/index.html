@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller - 2 Dice</title>
+    <style>
+        body {font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; background-color: bisque;}
+        #result {margin-top:1rem; font-size: 2rem;}
+        button {padding:0.5rem 1rem; font-size: 1rem;}
+        h1 {text-transform: uppercase;}
+    </style>
+</head>
+<body>
+    <h1>Two Dice Roller</h1>
+    <button type="button" id="roll-btn">Roll the dice</button>
+    <div id="result"></div>
+
+    <script type="module">
+        import { DiceRoller } from './dice-roller-2-dice.js'
+
+        const roller = new DiceRoller()
+        const resultDiv = document.getElementById('result')
+
+        document.getElementById('roll-btn').addEventListener('click', () => {
+            const {first, second, total} = roller.rollBoth()
+            resultDiv.textContent = `
+                First die: ${first}
+                Second die: ${second}
+                Total: ${total}
+            `
+        })
+        
+    </script>
+</body>
+</html>
