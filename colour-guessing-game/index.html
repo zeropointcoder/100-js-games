@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Guessing Game</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+      crossorigin="anonymous">
+
+</head>
+<body>
+    <section class="bg-dark text-light">
+        <div class="container py-5" style="min-height: 100vh;">
+            <h2>Colour Guessing Game</h2>
+            
+            <div class="row">
+                <div class="col-sm-6">
+                    <p class="fs-3 text-info">Guess the RGB colour! Example - rgb(255, 0, 0)</p>
+                    <div class="">
+                        <label class="form-label" for="guess-colour-input">Colour Guess</label>
+                        <input  class="form-control" type="text" name="guess-colour-input" id="guess-colour-input" placeholder="Enter your guess, e.g., rgb(255, 0, 0)" /><br>
+                        <button id="guess-submit-btn" type="button" class="btn btn-warning">Guess</button>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <p id="guesses-left" class="fs-3 text-warning"></p>
+                    <p id="result-message" class="fs-5">Result: </p>
+                    <button id="restart-btn" type="button" class="btn btn-danger">Restart game!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="colour-guessing-game.js"></script>
+</body>
+</html>
